@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    background-color: blue;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 80px 1fr 60px;
+    grid-template-areas:    "navegador"
+                            "selector"
+                            "galeria"
+                            "footer";
+
+}
+
+
+    
+
+.filtros {
+
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    grid-area: selector;
+    color: white;
+}
+
+.filtros select {
+    width: 350px;
+    height: 50px;
+}
+
+.logo {
+    width: 50px;
+    
+}
+
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: black
+    align-items: center;
+    grid-area: navegador;
+}
+
+.logo_encabezado {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+
+
+.opciones {
+    text-align-last: left;
+    padding: 10px;
+
+
+}
+
+.container_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.container_cards button {
+    background-color: black;
+    border: solid 1px white;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: yellow;
+    width: 250px;
+    padding: 25px 0;
+    gap: 20px;
+    border-radius: 5px;
+    border: solid 3px black;
+}
+
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: galeria;
+}
+
+.galeria img {
+    width: 200px;
+}
+
+.botones {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.botones button {
+    width: 30px;
+    height: 30px;
+    color: yellow;
+    background-color: black;
+    border: solid 1px yellow;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    grid-area: footer;
+}
+
+
+@media (min-width: 576px) {
+    body {
+        background-color: black;
+    }
+
+    .container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 80px 1fr 100px;
+        grid-template-areas:    "navegador selector"
+                                "navegador galeria"
+                                "footer galeria";
+    }
+
+    .encabezado {
+        flex-direction: column;
+        justify-content: start;
+        color: white;
+        background-color: blue;
+
+    }
+
+   
+
+    .galeria {
+        padding-top: 15px;
+    }
+
+    .container_cards {
+        overflow: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 35px;
+    }
+
+    .encabezado ul {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 15px;
+        list-style: none;
+
+    }
+
+    .encabezado li {
+        padding: 10px;
+    }
+
+    .encabezado h1 {
+        font-size: 26px;
+    }
+
+    .botones {
+        display: flex;
+        padding-top: 50px;
+    }
+
+    .botones button {
+        width: 30px;
+        height: 30px;
+        color: black;
+        background-color: white;
+        border: solid 1px black;
+    }
+
+    .cards {
+        background-color: white;
+        color: black;
+    }
+
+    .cards span {
+        font-weight: 600;
+    }
+
+    footer {
+        display: flex;
+        background-color: blue;
+        color: white;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+   
+
+
+ 
+
+}
